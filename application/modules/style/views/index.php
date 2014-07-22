@@ -89,14 +89,12 @@
                 <div id="page-content" style="min-height: 580px;"></div>
 
                 <!-- Footer -->
-                <footer><?php echo date('Y'); ?> &COPY; SIKAPI - Sistem Katalog Produksi Industri Indonesia</footer>
+                <footer><?php echo date('Y'); ?> &COPY; SIKAPI - Sistem Katalog Produksi Industri</footer>
             </div>
 
         </div>
 
         <?php echo $this->load->view('js'); ?>
-        <script type="text/javascript">
-
-        </script>
+        <script type="text/javascript"></script>
     </body>
 </html>

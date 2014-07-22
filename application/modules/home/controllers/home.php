@@ -23,7 +23,7 @@ class Home extends MX_Controller {
     }
 
     function style() {
-        echo 'asd';
+        $this->load->view('home/style');
     }
 
 }
