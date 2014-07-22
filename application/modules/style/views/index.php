@@ -30,34 +30,35 @@
                 <ul id="widgets" class="navbar-nav-custom">
                     <li class="divider-vertical"></li>
                     <li>
-                        <a id="btn-header-project" href="javascript:void(0)">
+                        <a id="btn-header-home" href="javascript:void(0)">
                             <i class="icon-home"></i> Beranda
                             <span class="badge badge-warning display-none"></span>
                         </a>                        
                     </li>
                     <li class="divider-vertical"></li>
                     <li>
-                        <a id="btn-header-docs" href="javascript:void(0)">
+                        <a id="btn-header-website" href="javascript:void(0)">
                             <i class="icon-globe"></i> Perusahaan & Website
                             <span class="badge badge-warning display-none"></span>
                         </a>                        
                     </li>
                     <li class="divider-vertical"></li>
                     <li>
-                        <a id="btn-header-docs" href="javascript:void(0)">
+                        <a id="btn-header-product" href="javascript:void(0)">
                             <i class="icon-tags"></i> Produk
                             <span class="badge badge-warning display-none"></span>
                         </a>                        
                     </li>
                     <li class="divider-vertical"></li>
                     <li>
-                        <a id="btn-header-docs" href="javascript:void(0)">
+                        <a id="btn-header-buyreq" href="javascript:void(0)">
                             <i class="icon-check-sign"></i> Permintaan Pembelian
                             <span class="badge badge-warning display-none"></span>
                         </a>                        
                     </li>
+                    <li class="divider-vertical"></li>
                     <li>
-                        <a id="btn-header-docs" href="javascript:void(0)">
+                        <a id="btn-header-contact" href="javascript:void(0)">
                             <i class="icon-phone-sign"></i> Pesan & Kontak
                             <span class="badge badge-warning display-none"></span>
                         </a>                        
@@ -95,6 +96,18 @@
         </div>
 
         <?php echo $this->load->view('js'); ?>
-        <script type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#page-sidebar').load("<?php echo site_url('style/sidebar_home') ?>");
+                $('#btn-header-home').click(function() {
+                    $('#page-sidebar').load("<?php echo site_url('style/sidebar_home') ?>");
+                    return false;
+                });
+                $('#btn-header-website').click(function() {
+                    $('#page-sidebar').load("<?php echo site_url('style/sidebar_website') ?>");
+                    return false;
+                });
+            });
+        </script>
     </body>
 </html>

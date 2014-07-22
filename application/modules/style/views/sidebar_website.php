@@ -1,8 +1,29 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<nav id="primary-nav">
+    <ul>
+        <li>
+            <a href="javascript:void(0)" id="btn-collection-main" data-id="">
+                <i class="icon-info-sign"></i>
+                Company Detail
+            </a>                
+        </li>
+        <li>
+            <a href="javascript:void(0)" id="btn-collection-main" data-id="">
+                <i class="halfling-tasks"></i>
+                Trade Detail
+            </a>                
+        </li>
+        <li>
+            <a href="javascript:void(0)" id="btn-collection-main" data-id="">
+                <i class="halfling-tasks"></i>
+                Partner Factory
+            </a>                
+        </li>
+        <li>
+            <a href="javascript:void(0)" id="btn-collection-main" data-id="">
+                <i class="halfling-tasks"></i>
+                Company Introduction
+            </a>                
+        </li>
+    </ul>
+    <ul id="sidebar-menu"></ul>
+</nav>
