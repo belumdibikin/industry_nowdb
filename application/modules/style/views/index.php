@@ -70,7 +70,7 @@
                     <li class="divider-vertical"></li>
                     <li id="rss-widget" class="dropdown dropdown-left-responsive">
                         <a id="btn-detail-profile" href="<?php echo site_url('home/logout'); ?>">
-                            <i class="icon-signout"></i> Logout
+                            <i class="fa fa-sign-out"></i> Logout
                             <span class="badge badge-warning display-none"></span>
                         </a>                        
                     </li>
