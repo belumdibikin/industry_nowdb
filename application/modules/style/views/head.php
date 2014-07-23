@@ -23,4 +23,4 @@
 <link rel="stylesheet" href="<?php echo base_url(); ?>asset/style/css/themes.css">
 
 <!-- Modernizr -->
-<script src="<?php echo base_url(); ?>asset/style/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="<?php echo base_url(); ?>asset/style/js/vendor/modernizr-2.7.1-respond-1.4.2.min.js"></script>

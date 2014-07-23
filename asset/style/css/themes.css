@@ -8,7 +8,7 @@
 
 /*
 =================================================================
-#db4a39 - THEME DEFAULT
+THEME DEFAULT
 =================================================================
 */
 
@@ -26,72 +26,72 @@
 
 /*
 =================================================================
-#284e99 - THEME DEEPBLUE
+THEME DEEPBLUE
 =================================================================
 */
 
 .themed-color-deepblue {
-    color: #284e99 !important;
+    color: #397edb !important;
 }
 
 .themed-background-deepblue {
-    background-color: #284e99 !important;
+    background-color: #397edb !important;
 }
 
 .themed-border-deepblue {
-    border-color: #284e99 !important;
+    border-color: #397edb !important;
 }
 
 /*
 =================================================================
-#365917 - THEME DEEPGREEN
+THEME DEEPGREEN
 =================================================================
 */
 
 .themed-color-deepgreen {
-    color: #365917 !important;
+    color: #7ca955 !important;
 }
 
 .themed-background-deepgreen {
-    background-color: #365917 !important;
+    background-color: #7ca955 !important;
 }
 
 .themed-border-deepgreen {
-    border-color: #365917 !important;
+    border-color: #7ca955 !important;
 }
 
 /*
 =================================================================
-#594117 - THEME DEEPWOOD
-=================================================================
-*/
-
-.themed-color-deepwood {
-    color: #594117 !important;
-}
-
-.themed-background-deepwood {
-    background-color: #594117 !important;
-}
-
-.themed-border-deepwood {
-    border-color: #594117 !important;
-}
-
-/*
-=================================================================
-#6b2180 - THEME DEEPPURPLE
+THEME DEEPPURPLE
 =================================================================
 */
 
 .themed-color-deeppurple {
-    color: #6b2180 !important;
+    color: #b739db !important;
 }
 
 .themed-background-deeppurple {
-    background-color: #6b2180 !important;
+    background-color: #b739db !important;
 }
 
 .themed-border-deeppurple {
-    border-color: #6b2180 !important;
+    border-color: #b739db !important;
+}
+
+/*
+=================================================================
+THEME DEEPWOOD
+=================================================================
+*/
+
+.themed-color-deepwood {
+    color: #927254 !important;
+}
+
+.themed-background-deepwood {
+    background-color: #927254 !important;
+}
+
+.themed-border-deepwood {
+    border-color: #927254 !important;
 }

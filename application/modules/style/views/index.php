@@ -31,35 +31,35 @@
                     <li class="divider-vertical"></li>
                     <li>
                         <a id="btn-header-home" href="javascript:void(0)">
-                            <i class="icon-home"></i> Beranda
+                            <i class="fa fa-home"></i> Beranda
                             <span class="badge badge-warning display-none"></span>
                         </a>                        
                     </li>
                     <li class="divider-vertical"></li>
                     <li>
                         <a id="btn-header-website" href="javascript:void(0)">
-                            <i class="icon-globe"></i> Perusahaan & Website
+                            <i class="fa fa-globe"></i> Perusahaan & Website
                             <span class="badge badge-warning display-none"></span>
                         </a>                        
                     </li>
                     <li class="divider-vertical"></li>
                     <li>
                         <a id="btn-header-product" href="javascript:void(0)">
-                            <i class="icon-tags"></i> Produk
+                            <i class="fa fa-cubes"></i> Produk
                             <span class="badge badge-warning display-none"></span>
                         </a>                        
                     </li>
                     <li class="divider-vertical"></li>
                     <li>
                         <a id="btn-header-buyreq" href="javascript:void(0)">
-                            <i class="icon-check-sign"></i> Permintaan Pembelian
+                            <i class="fa fa-shopping-cart"></i> Permintaan Pembelian
                             <span class="badge badge-warning display-none"></span>
                         </a>                        
                     </li>
                     <li class="divider-vertical"></li>
                     <li>
                         <a id="btn-header-contact" href="javascript:void(0)">
-                            <i class="icon-phone-sign"></i> Pesan & Kontak
+                            <i class="fa fa-phone-square"></i> Pesan & Kontak
                             <span class="badge badge-warning display-none"></span>
                         </a>                        
                     </li>

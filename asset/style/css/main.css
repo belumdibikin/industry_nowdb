@@ -15,6 +15,9 @@
  *      (#m09rts) RETINA
  */
 
+/* Include Roboto font from Google Web Fonts */
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic');
+
 /*
 =================================================================
 (#m01lls) LOGIN
@@ -115,12 +118,12 @@ body {
     min-height: 1200px;
 }
 
-footer {
+#page-content + footer {
     line-height: 30px;
     text-align: center;
     font-size: 12px;
     height: 30px;
-    padding: 0 20px;
+    padding: 0 10px;
     background-color: #f6f6f6;
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
@@ -183,10 +186,16 @@ footer {
     background-color: #e5e5e5;
 }
 
-.widget > li.widget-heading > a > [class^="icon-"],
-.widget > li.widget-heading > a >[class*=" icon-"],
-.widget > li.widget-heading > [class^="icon-"],
-.widget > li.widget-heading > [class*=" icon-"]{
+.widget > li.widget-heading > a > .fa,
+.widget > li.widget-heading > .fa,
+.widget > li.widget-heading > a > .gi,
+.widget > li.widget-heading > .gi,
+.widget > li.widget-heading > a > .hi,
+.widget > li.widget-heading > .hi,
+.widget > li.widget-heading > a > .si,
+.widget > li.widget-heading > .si,
+.widget > li.widget-heading > a > .fi,
+.widget > li.widget-heading > .fi {
     font-size: 18px;
     font-weight: normal;
     vertical-align: bottom;
@@ -226,8 +235,11 @@ footer {
     color: inherit;
 }
 
-.widget a.widget-link:hover [class^="icon-"],
-.widget a.widget-link:hover [class*=" icon-"] {
+.widget a.widget-link:hover .fa,
+.widget a.widget-link:hover .gi,
+.widget a.widget-link:hover .hi,
+.widget a.widget-link:hover .si,
+.widget a.widget-link:hover .fi {
     text-decoration: none;
 }
 
@@ -333,7 +345,8 @@ footer {
     padding: 9px 10px 6px 40px;
 }
 
-#primary-nav li a:hover {
+#primary-nav li a:hover,
+#primary-nav li a:focus {
     color: #777;
     background-color: #f6f6f6;
     text-decoration: none;
@@ -702,7 +715,7 @@ footer {
     font-size: 20px;
     width: 40px;
     height: 40px;
-    line-height: 40px;
+    line-height: 38px;
     text-align: center;
     position: fixed;
     bottom: 85px;
@@ -1268,6 +1281,7 @@ footer {
 .landing-container .navbar-con {
     position: relative;
     text-align: center;
+    min-height: 40px;
 }
 
 .landing-container header .nav-left {
@@ -1561,6 +1575,7 @@ h1, h2, h3 {
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
     background: #db4a39;
+    color: #fff;
 }
 
 /* Navbar */
@@ -1586,6 +1601,7 @@ header.navbar {
     padding-left: 10px;
     padding-right: 10px;
     margin: 0;
+    height: 40px;
 }
 
 header.navbar .navbar-brand {
@@ -1647,6 +1663,11 @@ header.navbar .navbar-brand {
     border-bottom-color: #999;
 }
 
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #fff;
+}
+
 /* Nav pills */
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
@@ -1661,6 +1682,15 @@ header.navbar .navbar-brand {
     color: #fff;
     background-color: #db4a39;
     border: 1px solid #db4a39;
+}
+
+.pagination > li > a,
+.pagination > li > span,
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+    color: #db4a39;
 }
 
 /* Tabs */
@@ -1730,10 +1760,11 @@ header.navbar .navbar-brand {
 }
 
 a.thumbnail {
-  -webkit-transition: none;
-     -moz-transition: none;
-       -o-transition: none;
-          transition: none;
+    margin-bottom: 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
 }
 
 a.thumbnail:hover,
@@ -1901,6 +1932,72 @@ span.input-group-addon {
     background-color: #f5f5f5;
 }
 
+/* Form Select Switches */
+.switch {
+    margin: 1px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.switch input {
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.switch span {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 28px;
+    background-color: #dddddd;
+    -webkit-transition: background-color 0.35s;
+    transition: background-color 0.35s;
+}
+
+.switch span:after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    bottom: 2px;
+    width: 24px;
+    background-color: #ffffff;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.switch input:checked + span:after {
+    left: 28px;
+    width: 24px;
+    top: 2px;
+    bottom: 2px;
+}
+
+.switch input:checked + span {
+    background-color: #cccccc;
+}
+
+.switch-default input:checked + span {
+    background-color: #999999;
+}
+
+.switch-info input:checked + span {
+    background-color: #7abce7;
+}
+
+.switch-success input:checked + span {
+    background-color: #aad178;
+}
+
+.switch-warning input:checked + span {
+    background-color: #f7be64;
+}
+
+.switch-danger input:checked + span {
+    background-color: #ef8a80;
+}
+
 /* Tables + DataTables */
 .cell-small {
     width: 85px;
@@ -1931,6 +2028,14 @@ span.input-group-addon {
     margin: 0;
 }
 
+.dataTables_filter label,
+.dataTables_length label,
+.dataTables_info,
+.dataTables_paginate {
+    margin: 0;
+    padding: 0;
+}
+
 .dataTables_length label {
     float: left;
     text-align: left;
@@ -1938,8 +2043,6 @@ span.input-group-addon {
 
 .dataTables_length select {
     width: 55px;
-    padding: 5px;
-    margin-top: 3px;
 }
 
 .dataTables_length select:focus {
@@ -1948,7 +2051,11 @@ span.input-group-addon {
 
 .dataTables_filter label {
     float: right;
-    width: 100%;
+}
+
+.dataTables_filter label input {
+    font-weight: normal;
+    width: 150px;
 }
 
 .dataTables_info {
@@ -1957,6 +2064,12 @@ span.input-group-addon {
 
 .dataTables_paginate {
     float: right;
+    margin: 0;
+}
+
+div.dataTables_paginate ul.pagination {
+    margin: 2px 0;
+    white-space: nowrap;
 }
 
 table.table thead .sorting,
@@ -2107,10 +2220,6 @@ table.table thead .sorting_desc_disabled {
 }
 
 /* Progress */
-.progress {
-    line-height: 20px;
-}
-
 .progress.progress-mini {
     height: 10px;
     line-height: 10px;
@@ -2125,6 +2234,22 @@ table.table thead .sorting_desc_disabled {
 .panel-group .panel + .panel {
     margin-top: 0;
     border-top: none;
+}
+
+/* Carousel */
+.carousel-control span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    display: inline-block;
+}
+
+.carousel-control i {
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
 }
 
 /* List Group */
@@ -2228,6 +2353,10 @@ a:focus {
     transition: none !important;
 }
 
+:focus {
+    outline: 0 !important;
+}
+
 /*
 =================================================================
 (#m08res) RESPONSIVE
@@ -2261,14 +2390,24 @@ a:focus {
     #page-sidebar.navbar-collapse.collapse {
         display: none !important;
         height: 0 !important;
-        overflow: hidden !important;
+        overflow-y: hidden !important;
+    }
+
+    #page-sidebar.navbar-collapse.collapse.in {
+        display: block !important;
+        height: auto !important;
     }
 
     header.navbar-fixed-top + #inner-container > #page-sidebar,
     header.navbar-fixed-bottom + #inner-container > #page-sidebar {
-        position: fixed;
-        height: 340px !important;
+        position: fixed !important;
         overflow-y: scroll !important;
+        max-height: 340px !important;
+    }
+
+    header.navbar-fixed-top + #inner-container > #page-sidebar.collapse,
+    header.navbar-fixed-bottom + #inner-container > #page-sidebar.collapse {
+        height: 340px !important;
     }
 
     header.navbar-fixed-top + #inner-container > #page-sidebar {
@@ -2299,7 +2438,7 @@ a:focus {
         border: none;
     }
 
-    footer {
+    #page-content + footer {
         margin: 0;
         border-left: none;
     }
@@ -2424,13 +2563,6 @@ a:focus {
 
     header.navbar {
         height: auto;
-    }
-
-    header.navbar-fixed-top + #inner-container > #page-sidebar,
-    header.navbar-fixed-bottom + #inner-container > #page-sidebar {
-        position: fixed;
-        height: 340px !important;
-        overflow-y: scroll !important;
     }
 
     header.navbar-fixed-top + #inner-container > #page-sidebar {

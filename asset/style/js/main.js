@@ -1,7 +1,11 @@
 /*
  *  Document   : main.js
  *  Author     : pixelcave
- *  Description: Custom scripts and plugin initializations
+ *  Description: Custom scripts and plugin initializations (available to all pages)
+ *
+ *  Feel free to remove the plugin initilizations from uiInit() if you would like to
+ *  use them only in specific pages. Also, if you remove a js plugin you won't use, make
+ *  sure to remove its initialization from uiInit().
  */
 
 var webApp = function() {
@@ -12,7 +16,7 @@ var webApp = function() {
         // Add the  correct copyright year at the footer
         var yearCopy = $('#year-copy'), d = new Date();
 
-        if (d.getFullYear() === 2013) { yearCopy.html('2013'); } else { yearCopy.html('2013-' + d.getFullYear()); }
+        if (d.getFullYear() === 2013) { yearCopy.html('2013'); } else { yearCopy.html('2013-' + d.getFullYear().toString().substr(2,2)); }
 
         // Set min-height to #page-content, so that footer is visible at the bottom if there is not enough content
         var pageContent = $('#page-content');
@@ -49,9 +53,9 @@ var webApp = function() {
            .mouseout(function(){ $(this).find('.thumbnails-options').hide();});
 
         // Initialize Slimscroll
-        $('.scrollable').slimScroll({ height: '100px', size: '3px', touchScrollStep: 750 });
-        $('.scrollable-tile').slimScroll({ height: '130px', size: '3px', touchScrollStep: 750 });
-        $('.scrollable-tile-2x').slimScroll({ height: '330px', size: '3px', touchScrollStep: 750 });
+        $('.scrollable').slimScroll({ height: '100px', size: '3px', touchScrollStep: 100 });
+        $('.scrollable-tile').slimScroll({ height: '130px', size: '3px', touchScrollStep: 100 });
+        $('.scrollable-tile-2x').slimScroll({ height: '330px', size: '3px', touchScrollStep: 100 });
 
         // Initialize Tooltips
         $('[data-toggle="tooltip"]').tooltip({ container: 'body', animation: false });
@@ -62,8 +66,8 @@ var webApp = function() {
         // Initialize Chosen
         $('.select-chosen').chosen();
 
-        // Initialize Bootstrap switch
-        $('.input-switch').bootstrapSwitch();
+        // Initialize Select2
+        $('.select-select2').select2();
 
         // Initialize elastic
         $('textarea.textarea-elastic').elastic();
@@ -82,6 +86,9 @@ var webApp = function() {
 
         // Initialize DateRangePicker
         $('.input-daterangepicker').daterangepicker();
+
+        // Initialize Placeholder
+        $('input, textarea').placeholder();
     };
 
     /* Demo Code */
@@ -97,14 +104,15 @@ var webApp = function() {
             loading.fadeIn(250);
 
             // Hide all badges from widget links
-            $('#widgets > li > a > .badge').hide(250);
+            $('#widgets > li > a > .badge').addClass('display-none');
 
             // Wait a while (the real updating could happen here)
             setTimeout(function(){
                 // Fade Out loading and add some demo badges
                 loading.fadeOut(250);
-                $('#rss-widget > a > .badge').show(250).html('5');
-                $('#twitter-widget > a > .badge').show(250).html('4');
+
+                $('#rss-widget > a > .badge').removeClass('display-none').html('5');
+                $('#twitter-widget > a > .badge').removeClass('display-none').html('4');
             }, 1000);
         });
 
@@ -196,12 +204,14 @@ var webApp = function() {
     var themeOptions = function () {
 
         // Get all switches
-        var toptFixedHeaderTop      = $('#topt-fixed-header-top');
-        var toptFixedHeaderBottom   = $('#topt-fixed-header-bottom');
-        var toptFixedLayout         = $('#topt-fixed-layout');
+        var toptFixedHeaderTop      = $('#topt-fixed-header-top input');
+        var toptFixedHeaderBottom   = $('#topt-fixed-header-bottom input');
+        var toptFixedLayout         = $('#topt-fixed-layout input');
 
-        // Cache <header> element
-        var header = $('header');
+        // Cache elements
+        var header  = $('header');
+        var pageCon = $('#page-container');
+        var body    = $('body');
 
         // Show-Hide Theme Options
         $('.btn-theme-options').click(function(){
@@ -210,42 +220,41 @@ var webApp = function() {
             return false;
         });
 
-        // Change header to fixed top
-        toptFixedHeaderTop.on('switch-change', function (e, data) {
+        // Initialize checkboxes
+        if (header.hasClass('navbar-fixed-top')){ toptFixedHeaderTop.prop('checked', true); }
+        if (header.hasClass('navbar-fixed-bottom')){ toptFixedHeaderBottom.prop('checked', true); }
+        if (body.hasClass('fixed')){ toptFixedLayout.prop('checked', true); }
 
-            if (data.value === true) {
-                toptFixedHeaderBottom.bootstrapSwitch('setState', false);
-                header.addClass('navbar-fixed-top');
-                $('#page-container').addClass('header-fixed-top');
-            }
-            else {
+        // Change header to fixed top
+        toptFixedHeaderTop.change(function() {
+            if($(this).is(":checked")) {
+                toptFixedHeaderBottom.prop('checked', false);
+                header.removeClass('navbar-fixed-bottom').addClass('navbar-fixed-top');
+                pageCon.removeClass('header-fixed-bottom').addClass('header-fixed-top');
+            } else {
                 header.removeClass('navbar-fixed-top');
-                $('#page-container').removeClass('header-fixed-top');
+                pageCon.removeClass('header-fixed-top');
             }
         });
 
         // Change header to fixed bottom
-        toptFixedHeaderBottom.on('switch-change', function (e, data) {
-
-            if (data.value === true) {
-                toptFixedHeaderTop.bootstrapSwitch('setState', false);
-                header.addClass('navbar-fixed-bottom');
-                $('#page-container').addClass('header-fixed-bottom');
-            }
-            else {
+        toptFixedHeaderBottom.change(function() {
+            if($(this).is(":checked")) {
+                toptFixedHeaderTop.prop('checked', false);
+                header.removeClass('navbar-fixed-top').addClass('navbar-fixed-bottom');
+                pageCon.removeClass('header-fixed-top').addClass('header-fixed-bottom');
+            } else {
                 header.removeClass('navbar-fixed-bottom');
-                $('#page-container').removeClass('header-fixed-bottom');
+                pageCon.removeClass('header-fixed-bottom');
             }
         });
 
         // Change layout to fixed
-        toptFixedLayout.on('switch-change', function (e, data) {
-
-            if (data.value === true) {
-                $('body').addClass('fixed');
-            }
-            else {
-                $('body').removeClass('fixed');
+        toptFixedLayout.change(function() {
+            if($(this).is(":checked")) {
+                body.addClass('fixed');
+            } else {
+                body.removeClass('fixed');
             }
         });
 
@@ -286,46 +295,14 @@ var webApp = function() {
         });
     };
 
-    /* Input placeholder for older browsers */
-    var oldiePlaceholder = function() {
-
-        // Check if placeholder feature is supported by browser
-        if(!Modernizr.input.placeholder) {
-
-            // If not, add the functionality
-            $('[placeholder]').focus(function() {
-                var input = $(this);
-                if (input.val() === input.attr('placeholder')) {
-                    input.val('');
-                    input.removeClass('ph');
-                }
-            }).blur(function() {
-                var input = $(this);
-                if (input.val() === '' || input.val() === input.attr('placeholder')) {
-                    input.addClass('ph');
-                    input.val(input.attr('placeholder'));
-                }
-            }).blur().parents('form').submit(function() {
-                $(this).find('[placeholder]').each(function() {
-                    var input = $(this);
-                    if (input.val() === input.attr('placeholder')) {
-                        input.val('');
-                    }
-                });
-            });
-        }
-    };
-
     /* Datatables Bootstrap integration */
     var dtIntegration = function() {
-
-        // Set the defaults for DataTables initialization
         $.extend(true, $.fn.dataTable.defaults, {
             "sDom": "<'row'<'col-sm-6 col-xs-5'l><'col-sm-6 col-xs-7'f>r>t<'row'<'col-sm-5 hidden-xs'i><'col-sm-7 col-xs-12 clearfix'p>>",
             "sPaginationType": "bootstrap",
             "oLanguage": {
                 "sLengthMenu": "_MENU_",
-                "sSearch": "<div class=\"input-group\"><span class=\"input-group-addon\"><i class=\"icon-search\"></i></span>_INPUT_</div>",
+                "sSearch": "<div class=\"input-group\">_INPUT_<span class=\"input-group-addon\"><i class=\"fa fa-search\"></i></span></div>",
                 "sInfo": "<strong>_START_</strong>-<strong>_END_</strong> of <strong>_TOTAL_</strong>",
                 "oPaginate": {
                     "sPrevious": "",
@@ -333,100 +310,10 @@ var webApp = function() {
                 }
             }
         });
-
-        // Default class modification
         $.extend($.fn.dataTableExt.oStdClasses, {
-            "sWrapper": "dataTables_wrapper form-inline"
-        });
-
-        // API method to get paging information
-        $.fn.dataTableExt.oApi.fnPagingInfo = function(oSettings)
-        {
-            return {
-                "iStart": oSettings._iDisplayStart,
-                "iEnd": oSettings.fnDisplayEnd(),
-                "iLength": oSettings._iDisplayLength,
-                "iTotal": oSettings.fnRecordsTotal(),
-                "iFilteredTotal": oSettings.fnRecordsDisplay(),
-                "iPage": Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength),
-                "iTotalPages": Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength)
-            };
-        };
-
-        // Bootstrap style pagination control
-        $.extend($.fn.dataTableExt.oPagination, {
-            "bootstrap": {
-                "fnInit": function(oSettings, nPaging, fnDraw) {
-                    var oLang = oSettings.oLanguage.oPaginate;
-                    var fnClickHandler = function(e) {
-                        e.preventDefault();
-                        if (oSettings.oApi._fnPageChange(oSettings, e.data.action)) {
-                            fnDraw(oSettings);
-                        }
-                    };
-
-                    $(nPaging).append(
-                        '<ul class="pagination pagination-sm remove-margin">' +
-                        '<li class="prev disabled"><a href="javascript:void(0)"><i class="icon-chevron-left"></i> ' + oLang.sPrevious + '</a></li>' +
-                        '<li class="next disabled"><a href="javascript:void(0)">' + oLang.sNext + ' <i class="icon-chevron-right"></i></a></li>' +
-                        '</ul>'
-                        );
-                    var els = $('a', nPaging);
-                    $(els[0]).bind('click.DT', {action: "previous"}, fnClickHandler);
-                    $(els[1]).bind('click.DT', {action: "next"}, fnClickHandler);
-                },
-                "fnUpdate": function(oSettings, fnDraw) {
-                    var iListLength = 5;
-                    var oPaging = oSettings.oInstance.fnPagingInfo();
-                    var an = oSettings.aanFeatures.p;
-                    var i, j, sClass, iStart, iEnd, iHalf = Math.floor(iListLength / 2);
-
-                    if (oPaging.iTotalPages < iListLength) {
-                        iStart = 1;
-                        iEnd = oPaging.iTotalPages;
-                    }
-                    else if (oPaging.iPage <= iHalf) {
-                        iStart = 1;
-                        iEnd = iListLength;
-                    } else if (oPaging.iPage >= (oPaging.iTotalPages - iHalf)) {
-                        iStart = oPaging.iTotalPages - iListLength + 1;
-                        iEnd = oPaging.iTotalPages;
-                    } else {
-                        iStart = oPaging.iPage - iHalf + 1;
-                        iEnd = iStart + iListLength - 1;
-                    }
-
-                    for (i = 0, iLen = an.length; i < iLen; i++) {
-                        // Remove the middle elements
-                        $('li:gt(0)', an[i]).filter(':not(:last)').remove();
-
-                        // Add the new list items and their event handlers
-                        for (j = iStart; j <= iEnd; j++) {
-                            sClass = (j === oPaging.iPage + 1) ? 'class="active"' : '';
-                            $('<li ' + sClass + '><a href="javascript:void(0)">' + j + '</a></li>')
-                                .insertBefore($('li:last', an[i])[0])
-                                .bind('click', function(e) {
-                                e.preventDefault();
-                                oSettings._iDisplayStart = (parseInt($('a', this).text(), 10) - 1) * oPaging.iLength;
-                                fnDraw(oSettings);
-                            });
-                        }
-
-                        // Add / remove disabled classes from the static elements
-                        if (oPaging.iPage === 0) {
-                            $('li:first', an[i]).addClass('disabled');
-                        } else {
-                            $('li:first', an[i]).removeClass('disabled');
-                        }
-
-                        if (oPaging.iPage === oPaging.iTotalPages - 1 || oPaging.iTotalPages === 0) {
-                            $('li:last', an[i]).addClass('disabled');
-                        } else {
-                            $('li:last', an[i]).removeClass('disabled');
-                        }
-                    }
-                }
-            }
+            "sWrapper": "dataTables_wrapper form-inline",
+            "sFilterInput": "form-control",
+            "sLengthSelect": "form-control"
         });
     };
 
@@ -438,7 +325,6 @@ var webApp = function() {
             primaryNav(); // Primary Navigation functionality
             scrollToTop(); // Scroll to top functionality
             themeOptions(); // Demo Theme Options functionality
-            oldiePlaceholder(); // Make input placeholder work in older browsers
             dtIntegration(); // Datatables Bootstrap integration
         }
     };

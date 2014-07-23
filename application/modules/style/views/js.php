@@ -1,5 +1,5 @@
 <!-- Get Jquery library from Google but if something goes wrong get Jquery from local file - Remove 'http:' if you have SSL -->
-<script src="<?php echo base_url(); ?>asset/style/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="<?php echo base_url(); ?>asset/style/js/vendor/jquery-1.11.1.min.js"></script>
 
 <!-- Bootstrap.js -->
 <script src="<?php echo base_url(); ?>asset/style/js/vendor/bootstrap.min.js"></script>
