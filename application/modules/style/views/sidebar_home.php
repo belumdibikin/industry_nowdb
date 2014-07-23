@@ -1,16 +1,16 @@
 <nav id="primary-nav">
     <ul>
         <li>
-            <a href="javascript:void(0)" id="btn-collection-main" data-id="<?php echo $row->id_project ?>">
-                <i class="icon-envelope"></i>
-                Cek Pesan
+            <a href="javascript:void(0)" id="">
+                <i class="fa fa-envelope"></i>
+                Pesan Terbaru
                 <span>10</span>
             </a>                
         </li>
         <li>
-            <a href="javascript:void(0)" id="btn-collection-main" data-id="<?php echo $row->id_project ?>">
-                <i class="halfling-tags"></i>
-                Produk Baru
+            <a href="javascript:void(0)">
+                <i class="fa fa-cube"></i>
+                Produk Terbaru
                 <span>10</span>
             </a>                
         </li>
