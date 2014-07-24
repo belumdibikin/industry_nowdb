@@ -38,4 +38,8 @@ class Style extends MX_Controller {
         $this->load->view('style/sidebar_contact');
     }
 
+    function index_certification() {
+        $this->load->view('style/index_certification');
+    }
+
 }

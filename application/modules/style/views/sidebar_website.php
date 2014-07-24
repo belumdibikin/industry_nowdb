@@ -21,10 +21,17 @@
             </a>                
         </li>
         <li>
-            <a href="javascript:void(0)" id="btn-collection-main" data-id="">
-                <i class="gi gi-certificate"></i>Sertifikat
+            <a href="javascript:void(0)" id="sdr-sertifikat">
+                <i class="gi gi-certificate"></i>Sertifikasi
             </a>                
         </li>
     </ul>
     <ul id="sidebar-menu"></ul>
 </nav>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#sdr-sertifikat').click(function() {
+            $('#page-content').load("<?php echo site_url('style/index_certification'); ?>");
+        });
+    });
+</script>
