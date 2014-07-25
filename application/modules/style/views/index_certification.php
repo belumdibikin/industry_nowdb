@@ -23,15 +23,9 @@
             <label class="control-label col-md-3" for="example-input-small">Tipe Sertifikat</label>
             <div class="col-md-4">
                 <select name="example-select-chosen" class="form-control">
-                    <option>html</option>
-                    <option>css</option>
-                    <option>javascript</option>
-                    <option>php</option>
-                    <option>mysql</option>
+                    <option>-- Pilih --</option>
+                    <option>Sertifikasi Sistem Manajemen</option>
                 </select>
-            </div>
-            <div class="col-md-5">
-                <span class="help-block">asd</span>
             </div>
         </div>
     </div>
@@ -41,9 +35,6 @@
             <div class="col-md-4">
                 <input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm">
             </div>
-            <div class="col-md-5">
-                <span class="help-block">asd</span>
-            </div>
         </div>
     </div>
     <div class="form-box-content">
@@ -52,9 +43,6 @@
             <div class="col-md-4">
                 <input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm">
             </div>
-            <div class="col-md-5">
-                <span class="help-block">asd</span>
-            </div>
         </div>
     </div>
     <div class="form-box-content">
@@ -62,9 +50,6 @@
             <label class="control-label col-md-3" for="example-input-small">Dikeluarkan Oleh</label>
             <div class="col-md-4">
                 <input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm">
-            </div>
-            <div class="col-md-5">
-                <span class="help-block">asd</span>
             </div>
         </div>
     </div>
@@ -77,9 +62,6 @@
                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                 </div>
             </div>
-            <div class="col-md-5">
-                <span class="help-block">asd</span>
-            </div>
         </div>
     </div>
     <div class="form-box-content">
@@ -91,9 +73,6 @@
                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                 </div>
             </div>
-            <div class="col-md-5">
-                <span class="help-block">asd</span>
-            </div>
         </div>
     </div>
     <div class="form-box-content">
@@ -101,9 +80,6 @@
             <label class="control-label col-md-3" for="example-input-small">Deskripsi/Cakupan</label>
             <div class="col-md-4">
                 <textarea class="form-control" style="resize: vertical;"></textarea>
-            </div>
-            <div class="col-md-5">
-                <span class="help-block">asd</span>
             </div>
         </div>
     </div>
