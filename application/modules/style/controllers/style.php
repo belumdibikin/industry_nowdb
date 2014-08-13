@@ -42,4 +42,8 @@ class Style extends MX_Controller {
         $this->load->view('style/index_certification');
     }
 
+    function index_information() {
+        $this->load->view('style/index_information');
+    }
+
 }
