@@ -46,4 +46,32 @@ class Style extends MX_Controller {
         $this->load->view('style/index_information');
     }
 
+    function index_trade() {
+        $this->load->view('style/index_trade');
+    }
+
+    function index_partner() {
+        $this->load->view('style/index_partner');
+    }
+
+    function index_introduction() {
+        $this->load->view('style/index_introduction');
+    }
+    
+    function cert_certification(){
+        $this->load->view('style/cert_certification');
+    }
+    
+    function cert_honor(){
+        $this->load->view('style/cert_honor');
+    }
+    
+    function cert_patent(){
+        $this->load->view('style/cert_patent');
+    }
+    
+    function cert_trademark(){
+        $this->load->view('style/cert_trademark');
+    }
+
 }

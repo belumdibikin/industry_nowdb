@@ -80,6 +80,7 @@
                     <option value="Bali">Bali</option>
                     <option value="Banten">Banten</option>
                     <option value="Bengkulu">Bengkulu</option>
+                    <option value="Gorontalo">Gorontalo</option>
                     <option value="Daerah Istimewa Yogyakarta">Daerah Istimewa Yogyakarta</option>
                     <option value="Daerah Tingkat I Kalimantan Barat">Daerah Tingkat I Kalimantan Barat</option>
                     <option value="Irian Jaya">Irian Jaya</option>
