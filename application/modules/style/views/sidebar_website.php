@@ -1,23 +1,23 @@
 <nav id="primary-nav">
     <ul>
         <li>
-            <a href="javascript:void(0)" id="sdr-information" data-id="">
+            <a href="javascript:void(0)" id="sdr-company" data-id="">
                 <i class="fa fa-info-circle"></i>Informasi Perusahaan
             </a>                
         </li>
         <li>
-            <a href="javascript:void(0)" id="sdr-trade" data-id="">
+            <a href="javascript:void(0)" id="sdr_trade" data-id="">
                 <i class="fa fa-ticket"></i>Detail Perdagangan
             </a>                
         </li>
         <li>
-            <a href="javascript:void(0)" id="sdr-partner" data-id="">
+            <a href="javascript:void(0)" id="sdr_partner" data-id="">
                 <i class="gi gi-factory"></i>Pabrik Partner
             </a>                
         </li>
         <li>
-            <a href="javascript:void(0)" id="sdr-introduction" data-id="">
-                <i class="gi gi-keynote"></i>Pengenal Perusahaan
+            <a href="javascript:void(0)" id="sdr_intro" data-id="">
+                <i class="gi gi-keynote"></i>Pengantar Perusahaan
             </a>                
         </li>
         <li>
@@ -33,17 +33,17 @@
         $('#sdr-sertifikat').click(function() {
             $('#page-content').load("<?php echo site_url('style/index_certification'); ?>");
         });
-        $('#sdr-information').click(function() {
-            $('#page-content').load("<?php echo site_url('style/index_information'); ?>");
+        $('#sdr-company').click(function() {
+            $('#page-content').load("<?php echo site_url('style/index_company'); ?>");
         });
-        $('#sdr-trade').click(function() {
+        $('#sdr_trade').click(function() {
             $('#page-content').load("<?php echo site_url('style/index_trade'); ?>");
         });
-        $('#sdr-partner').click(function() {
+        $('#sdr_partner').click(function() {
             $('#page-content').load("<?php echo site_url('style/index_partner'); ?>");
         });
-        $('#sdr-introduction').click(function() {
-            $('#page-content').load("<?php echo site_url('style/index_introduction'); ?>");
+        $('#sdr_intro').click(function() {
+            $('#page-content').load("<?php echo site_url('style/index_intro'); ?>");
         });
     });
 </script>

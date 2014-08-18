@@ -1,162 +1,233 @@
 <!DOCTYPE html>
 <h3 class="page-header page-header-top">
-    <i class="gi gi-certificate"></i> <a style="text-decoration: none">Perusahaan Partner</a>
+	<i class="gi gi-factory"></i> <a style="text-decoration: none">Pabrik Partner</a>
 </h3>
 <form method="post" class="form-horizontal form-box" onsubmit="return false;">
-    <div class="form-box-content">
-        <div class="form-group">
-            <label class="control-label col-md-2" for="example-input-small">Data Perusahaan Partner</label>
-            <button class="btn btn-primary"><i class="fa fa-plus"></i>&nbsp;&nbsp;Tambah</button>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="example-input-small">Nama Perusahaan</label>
-                    <div class="col-md-3">
-                        <input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="example-input-small">Kontrak Kerjasama</label>
-                    <div class="col-md-3">
-                        <input type="file">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="example-input-small">Lama Kerjasama</label>
-                    <div class="col-md-3">
-                        <select id="example-select" name="example-select" class="form-control">
-                            <option value="">--Tahun--</option>
-                            <option value="1">1 Tahun</option>
-                            <option value="2">2 Tahun</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="example-input-small">Total Transaksi Tahun Terakhir</label>
-                    <div class="col-md-3">
-                        <select id="example-select" name="example-select" class="form-control">
-                            <option value="">--Total--</option>
-                            <option value="1000000000"><10000000000</option>
-                            <option value="2000000000"><20000000000</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="example-input-small">Data Produk</label>
-                    <button class="btn btn-primary" style="margin-left: 15px"><i class="fa fa-plus"></i>&nbsp;&nbsp;Tambah</button>
-                    <div class="form-box-content form-box col-md-offset-3">
-                        <div class="form-group">
-                            <label class="control-label col-md-3 " for="example-input-small">Nama Produk</label>
-                            <div class="col-md-8">
-                                <input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3" for="example-input-small">Volume Produksi Tahunan</label>
-                            <div class="col-md-4">
-                                <select id="example-select" name="example-select" class="form-control">
-                                    <option value="">--Volume Produksi--</option>
-                                    <option value="1000">1000</option>
-                                    <option value="2000">2000</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <select id="example-select" name="example-select" class="form-control">
-                                    <option value="">--Satuan Unit--</option>
-                                    <option value="ton">ton</option>
-                                    <option value="kg">kilogram</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-primary col-md-offset-1"><i class="fa fa-floppy-o"></i>&nbsp;&nbsp;Simpan</button>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-9 col-md-offset-3">
-                            <table id="dtProd" class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">#</th>
-                                        <th class="hidden-xs hidden-sm">Nama Produk</th>
-                                        <th class="hidden-xs hidden-sm">Volume Tahunan</th>
-                                        <th class="hidden-xs hidden-sm">Satuan</th>
-                                        <th class="text-center"><i class="fa fa-bolt"></i> Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="">1</td>
-                                        <td class="">Satu</td>
-                                        <td class="">2000</td>
-                                        <td class="">kg</td>
-                                        <td class="">
-                                            <button class="btn btn-danger btn-xs"><i class="fa fa-ban">Hapus</i></button>
-                                            <button class="btn btn-warning btn-xs"><i class="fa fa-cog">Rubah</i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">2</td>
-                                        <td class="">Dua</td>
-                                        <td class="">3000</td>
-                                        <td class="">ton</td>
-                                        <td class="">
-                                            <button class="btn btn-danger btn-xs"><i class="fa fa-ban">Hapus</i></button>
-                                            <button class="btn btn-warning btn-xs"><i class="fa fa-cog">Rubah</i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <button class="btn btn-primary"><i class="fa fa-floppy-o"></i>&nbsp;&nbsp;Simpan</button>
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-9 col-md-offset-1">
-            <table id="dtComp" class="table table-bordered table-hover">
-                <thead>
-                    <tr>
-                        <th class="text-center">#</th>
-                        <th class="hidden-xs hidden-sm">Nama Perusahaan</th>
-                        <th class="hidden-xs hidden-sm">Lama Kerjasama</th>
-                        <th class="hidden-xs hidden-sm">Total Trasanksi Tahun Terakhir</th>
-                        <th class="text-center"><i class="fa fa-bolt"></i> Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="">1</td>
-                        <td class="">Satu</td>
-                        <td class="">2</td>
-                        <td class="">200000000</td>
-                        <td class="">
-                            <button class="btn btn-danger btn-xs"><i class="fa fa-ban">Hapus</i></button>
-                            <button class="btn btn-warning btn-xs"><i class="fa fa-cog">Rubah</i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="">2</td>
-                        <td class="">Dua</td>
-                        <td class="">3</td>
-                        <td class="">10000000</td>
-                        <td class="">
-                            <button class="btn btn-danger btn-xs"><i class="fa fa-ban">Hapus</i></button>
-                            <button class="btn btn-warning btn-xs"><i class="fa fa-cog">Rubah</i></button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+	<div class="form-box-content">
+		<div class="form-group">
+			<label class="control-label col-md-3" for="example-input-small">Apakah Perusahaan Anda Memiliki Pabrik Partner?</label>
+			<div class="col-md-4">
+				<div class="radio">
+					<label for="example-radio1">
+						<input type="radio" id="partner_radio1" name="example-radios" value="option1" onclick="show()"> Ya
+					</label>
+				</div>
+				<div class="radio">
+					<label for="example-radio2">
+						<input type="radio" id="partner_radio2" name="example-radios" value="option2" onclick="hide()"> Tidak
+					</label>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="form-box-content" style="display:none;" id="partner_name_1">
+		<br/>
+		<h4 >
+			<i class="gi gi-factory"></i> <a style="text-decoration: none">Pabrik Partner</a>
+		</h4>
+		<div class="form-group">
+			<label class="control-label col-md-3" for="example-input-small">Nama Pabrik</label>
+			<div class="col-md-5">
+				<input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm">
+			</div>
+		</div>
+	</div>
+	<div class="form-box-content" style="display:none;" id="partner_year_1">
+		<div class="form-group">
+			<label class="control-label col-md-3" for="example-input-small">Lama Kerjasama</label>
+			<div class="col-md-4">
+				<select name="example-select-chosen" class="form-control">
+					<option>-- Pilih --</option>
+					<option>1 Tahun</option>
+					<option>2 Tahun</option>
+					<option>3 Tahun</option>
+					<option>4 Tahun</option>
+					<option>5 Tahun</option>
+					<option>6 Tahun</option>
+					<option>7 Tahun</option>
+					<option>8 Tahun</option>
+					<option>9 Tahun</option>
+					<option>10 Tahun</option>
+					<option>>10Tahun</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="form-box-content" style="display:none;" id="partner_amount_1">
+		<div class="form-group">
+			<label class="control-label col-md-3" for="example-input-small">Jumlah Total Transaksi Dengan Pabrik (Tahun Sebelumnya)</label>
+			<div class="col-md-4">
+				<select name="example-select-chosen" class="form-control">
+					<option>-- Pilih --</option>
+					<option>Dibawah 100 Juta Rupiah</option>
+					<option>100 - 300 Juta Rupiah</option>
+					<option>301 - 500 Juta Rupiah</option>
+					<option>501 - 1 Milyar Rupiah</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="form-box-content" style="display:none;" id="partner_product_1">
+		<div class="form-group">
+			<label class="control-label col-md-3" for="example-input-small">Kapasitas Produk</label>
+			<label class="control-label col-md-1" for="example-input-small"><span class="help-block">Produk</span></label>
+			<div class="col-md-2">
+				<input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm">
+			</div>
+			<label class="control-label col-md-2" for="example-input-small"><span class="help-block">Volume Produksi Tahunan</span></label>
+			<div class="col-md-2">
+				<input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm">
+			</div>
+			<div class="col-md-2">
+				<select name="example-select-chosen" class="form-control">
+					<option>Tipe Unit</option>
+					<option>Acre</option>
+					<option>Ampere</option>
+					<option>Barrel</option>
+					<option>Karat</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="form-box-content" style="display:none;" id="partner_product_2_1">
+		<div class="form-group">
+			<label class="control-label col-md-3" for="example-input-small"> </label>
+			<label class="control-label col-md-1" for="example-input-small"><span class="help-block">Produk</span></label>
+			<div class="col-md-2">
+				<input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm">
+			</div>
+			<label class="control-label col-md-2" for="example-input-small"><span class="help-block">Volume Produksi Tahunan</span></label>
+			<div class="col-md-2">
+				<input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm">
+			</div>
+			<div class="col-md-2">
+				<select name="example-select-chosen" class="form-control">
+					<option>Tipe Unit</option>
+					<option>Acre</option>
+					<option>Ampere</option>
+					<option>Barrel</option>
+					<option>Karat</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="form-box-content" style="display:none;" id="partner_product_3_1">
+		<div class="form-group">
+			<label class="control-label col-md-3" for="example-input-small"> </label>
+			<label class="control-label col-md-1" for="example-input-small"><span class="help-block">Produk</span></label>
+			<div class="col-md-2">
+				<input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm">
+			</div>
+			<label class="control-label col-md-2" for="example-input-small"><span class="help-block">Volume Produksi Tahunan</span></label>
+			<div class="col-md-2">
+				<input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm">
+			</div>
+			<div class="col-md-2">
+				<select name="example-select-chosen" class="form-control">
+					<option>Tipe Unit</option>
+					<option>Acre</option>
+					<option>Ampere</option>
+					<option>Barrel</option>
+					<option>Karat</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="form-box-content" style="display:none;" id="partner_btn_save_1">
+		<div class="form-group">
+			<label class="control-label col-md-3" for="example-input-small"> </label>
+			<div class="col-md-4">
+				<button class="btn btn-info"><i class="fa fa-floppy-o"></i>&nbsp;&nbsp;Simpan</button>
+				<!-- <button class="btn btn-warning"><i class="fa fa-plus"></i>&nbsp;&nbsp;Tambah</button> -->
+			</div>
+		</div>
+	</div>
 </form>
+<br>
+<table style="display:none;" id="partner_table_1" class="table table-bordered table-hover">
+	<thead>
+		<tr>
+			<th class="text-center">No</th>
+			<th class="hidden-xs hidden-sm">Nama Pabrik</th>
+			<th class="hidden-xs hidden-sm">Aksi</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="">1</td>
+			<td class="">Jl Kenangan Bandung</td>
+			<td class="">
+				<button class="btn btn-danger btn-xs"><i class="fa fa-times-circle"> Hapus</i></button>
+				<button class="btn btn-warning btn-xs"><i class="fa fa-pencil"> Ubah</i></button>
+				<button class="btn btn-info btn-xs"><i class="fa fa-eye"> Detail</i></button>
+				<a href="#modal-foto" data-toggle="modal"><button class="btn btn-primary btn-xs"><i class="fa fa-upload"> Unggah</i></button></a>
+			</td>
+		</tr>
+		<tr>
+			<td class="">2</td>
+			<td class="">Jl. Jalan Bandung</td>
+			<td class="">
+				<button class="btn btn-danger btn-xs"><i class="fa fa-times-circle"> Hapus</i></button>
+				<button class="btn btn-warning btn-xs"><i class="fa fa-pencil"> Ubah</i></button>
+				<button class="btn btn-info btn-xs"><i class="fa fa-eye"> Detail</i></button>
+				<a href="#modal-foto" data-toggle="modal"><button class="btn btn-primary btn-xs"><i class="fa fa-upload"> Unggah</i></button></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div id="modal-foto" class="modal">
+	<!-- Modal Dialog -->
+	<div class="modal-dialog">
+		<!-- Modal Content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+				<h4>Unggah Foto</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<label class="control-label col-md-4" for="example-input-small">Bukti Kontrak Kerjasama</label>
+					<div class="col-md-4">
+						<input type="file">
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-danger" data-dismiss="modal">Close</button>
+				<button class="btn btn-success">Save</button>
+			</div>
+		</div>
+		<!-- END Modal Content -->
+	</div>
+	<!-- END Modal Dialog -->
+</div>
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('.input-datepicker').datepicker();
-        $('#dtProd').dataTable();
-        $('#dtComp').dataTable();
-    });
+
+function show() {
+	$("#partner_head_1").show(300);
+	$("#partner_name_1").show(300);
+	$("#partner_year_1").show(300);
+	$("#partner_amount_1").show(300);
+	$("#partner_contract_1").show(300);
+	$("#partner_btn_save_1").show(300);
+	$("#partner_table_1").show(300);
+	$("#partner_product_1").show(300);
+	$("#partner_product_2_1").show(300);
+	$("#partner_product_3_1").show(300);
+}
+
+function hide(){
+	$("#partner_head_1").hide(300);
+	$("#partner_name_1").hide(300);
+	$("#partner_year_1").hide(300);
+	$("#partner_amount_1").hide(300);
+	$("#partner_contract_1").hide(300);
+	$("#partner_btn_save_1").hide(300);
+	$("#partner_table_1").hide(300);
+	$("#partner_product_1").hide(300);
+	$("#partner_product_2_1").hide(300);
+	$("#partner_product_3_1").hide(300);
+}
+
+
 </script>

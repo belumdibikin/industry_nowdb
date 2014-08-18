@@ -38,40 +38,89 @@ class Style extends MX_Controller {
         $this->load->view('style/sidebar_contact');
     }
 
+
+    //Navigation controller on sidebar product
+    function index_add_product() {
+        $this->load->view('style/index_add_product');
+    }
+
+    // Navigation controller on sidebar website
     function index_certification() {
         $this->load->view('style/index_certification');
     }
 
-    function index_information() {
-        $this->load->view('style/index_information');
+    function index_company(){
+        $this->load->view('style/index_company');
     }
 
-    function index_trade() {
+    function index_trade(){
         $this->load->view('style/index_trade');
     }
 
-    function index_partner() {
+    function index_partner(){
         $this->load->view('style/index_partner');
     }
 
-    function index_introduction() {
-        $this->load->view('style/index_introduction');
+    function index_intro(){
+        $this->load->view('style/index_intro');
+    }
+
+
+
+
+    // Certification
+    function nav_award(){
+        $this->load->view('style/nav_award');
+    }
+
+    function nav_certificate(){
+        $this->load->view('style/nav_certificate');
+    }
+
+     function nav_patent(){
+        $this->load->view('style/nav_patent');
     }
     
-    function cert_certification(){
-        $this->load->view('style/cert_certification');
+     function nav_trademarks(){
+        $this->load->view('style/nav_trademarks');
     }
     
-    function cert_honor(){
-        $this->load->view('style/cert_honor');
+    function sub_header_certificate(){
+        $this->load->view('style/sub_header_certificate');
     }
-    
-    function cert_patent(){
-        $this->load->view('style/cert_patent');
+
+    function sub_header_award(){
+        $this->load->view('style/sub_header_award');
     }
-    
-    function cert_trademark(){
-        $this->load->view('style/cert_trademark');
+
+    function sub_header_patent(){
+        $this->load->view('style/sub_header_patent');
+    }
+
+    function sub_header_trademarks(){
+        $this->load->view('style/sub_header_trademarks');
+    }
+
+    function form_fill_certificate(){
+        $this->load->view('style/form_fill_certificate');
+    }
+
+    function form_fill_award(){
+        $this->load->view('style/form_fill_award');
+    }
+
+    function form_fill_patent(){
+        $this->load->view('style/form_fill_patent');
+    }
+
+    function form_fill_trademarks(){
+        $this->load->view('style/form_fill_trademarks');
+    }
+
+
+    // Button for Append
+    function btn_minus(){
+        $this->load->view('style/btn_minus');
     }
 
 }

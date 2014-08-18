@@ -107,6 +107,10 @@
                     $('#page-sidebar').load("<?php echo site_url('style/sidebar_website') ?>");
                     return false;
                 });
+                $('#btn-header-product').click(function() {
+                    $('#page-sidebar').load("<?php echo site_url('style/sidebar_product') ?>");
+                    return false;
+                });
             });
         </script>
     </body>
