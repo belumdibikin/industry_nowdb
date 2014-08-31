@@ -22,7 +22,7 @@
         </li>
         <li>
             <a href="javascript:void(0)" id="sdr-sertifikat">
-                <i class="gi gi-certificate"></i>Sertifikasi
+                <i class="gi gi-certificate"></i>Ijin/Sertifikasi
             </a>                
         </li>
     </ul>

@@ -3,12 +3,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
- * Modul Home
+ * Modul Product
  * Contributor : Taufik Sulaeman P
  * Email : taufiksu@gmail.com 
  */
 
-class Home extends MX_Controller {
+class Product extends MX_Controller {
 
     function __construct() {
         parent::__construct();
