@@ -234,7 +234,7 @@ class User extends MX_Controller {
             
         $return = json_decode($json);
         
-        $_userdata = array('logged_in' => TRUE, 'id_user' => $return[0]->id, 'user_role' => $return[0]->user_type);
+        $_userdata = array('logged_in' => TRUE, 'id_user' => $return[0]->id, 'user_type' => $return[0]->user_type);
         
         $this->session->set_userdata($_userdata);
         redirect('dashboard/index');

@@ -101,7 +101,7 @@
                 success: function(data) {
                     $('#load').hide();
                     if (data !== '') {
-                        window.location = "<?php echo site_url('dashboard/index');?>";
+                        window.location = "<?php echo site_url('dashboard');?>";
                     } else {
                         $('#load').hide();
                         $('#log-fail').show();

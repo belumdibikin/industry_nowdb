@@ -98,17 +98,17 @@
         <?php echo $this->load->view('js'); ?>
         <script type="text/javascript">
             $(document).ready(function() {
-                $('#page-sidebar').load("<?php echo site_url('style/sidebar_home') ?>");
+                $('#page-sidebar').load("<?php echo site_url('dashboard/sidebar_home') ?>");
                 $('#btn-header-home').click(function() {
-                    $('#page-sidebar').load("<?php echo site_url('style/sidebar_home') ?>");
+                    $('#page-sidebar').load("<?php echo site_url('dashboard/sidebar_home') ?>");
                     return false;
                 });
                 $('#btn-header-website').click(function() {
-                    $('#page-sidebar').load("<?php echo site_url('style/sidebar_website') ?>");
+                    $('#page-sidebar').load("<?php echo site_url('company/sidebar_website') ?>");
                     return false;
                 });
                 $('#btn-header-product').click(function() {
-                    $('#page-sidebar').load("<?php echo site_url('style/sidebar_product') ?>");
+                    $('#page-sidebar').load("<?php echo site_url('dashboard/sidebar_product') ?>");
                     return false;
                 });
             });
