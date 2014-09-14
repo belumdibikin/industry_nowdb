@@ -108,7 +108,7 @@
                     return false;
                 });
                 $('#btn-header-product').click(function() {
-                    $('#page-sidebar').load("<?php echo site_url('product/sidebar_product') ?>");
+                    $('#page-sidebar').load("<?php echo site_url('dashboard/sidebar_product') ?>");
                     return false;
                 });
             });

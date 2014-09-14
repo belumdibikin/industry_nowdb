@@ -16,7 +16,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#add_product').click(function() {
-            $('#page-content').load("<?php echo site_url('product/index_addProduct'); ?>");
+            $('#page-content').load("<?php echo site_url('style/index_add_product'); ?>");
         });
     });
 </script>
