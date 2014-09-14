@@ -15,8 +15,7 @@ class Home extends MX_Controller {
     }
 
     function index() {
-        redirect('home/select_all_category');
-//        $this->load->view('home/index');
+        $this->load->view('home/index');
     }
 
     function dashboard() {
