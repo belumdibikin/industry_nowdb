@@ -1,7 +1,8 @@
 <?php
     echo $company_name;
     echo $company_location_registration;
-
+    echo $id;
+    echo $id_user;
 ?>
 
 <!DOCTYPE html>
@@ -272,6 +273,15 @@
 
 </form>
 <script type="text/javascript">
+    var id_company = "<?php echo $id; ?>";
+    
+    if(id_company != "")
+    {
+        var location_registration = "<?php echo $company_location_registration; ?>";
+        location_registration = location_registration.split("#");
+        console.log(location_registration);
+    }
+    
     function addOn() {
         $('#btn_plus').load("<?php echo site_url('company/btn_minus'); ?>");
         console.log("Masuk");
