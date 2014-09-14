@@ -12,6 +12,11 @@ class Company extends MX_Controller {
 
     function __construct() {
         parent::__construct();
+        if($this->getCompanyId() != '' or $this->getCompanyId() != NULL){
+            $this->session->set_userdata('id_company', $this->getCompanyId());
+        }else{
+            $this->session->set_userdata('id_company', '');
+        }
     }
     
     function index(){
@@ -19,11 +24,6 @@ class Company extends MX_Controller {
     }
     
     function sidebar_website() {
-        if($this->getCompanyId() != '' or $this->getCompanyId() != NULL){
-            $this->session->set_userdata('id_company', $this->getCompanyId());
-        }else{
-            $this->session->set_userdata('id_company', '');
-        }
         $this->load->view('company/sidebar_website');
     }
     
