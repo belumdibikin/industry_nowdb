@@ -1,5 +1,7 @@
 <?php
     echo $company_name;
+    echo $company_location_registration;
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +19,7 @@
             </div>
         </div>
     </div>
-    <div class="form-box-content">
+    <div class="form-box-content" id="company_location_registration_form_province">
         <div class="form-group">
             <label class="control-label col-md-3" for="company_location_registration">Lokasi Pendaftaran</label>
             <div class="col-md-4">
@@ -26,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div class="form-box-content">
+    <div class="form-box-content" style="display: none" id="company_location_registration_form_district">
         <div class="form-group">
             <label class="control-label col-md-3" for="company_location_registration"></label>
             <div class="col-md-4">
@@ -35,7 +37,7 @@
             </div>
         </div>
     </div>
-    <div class="form-box-content">
+    <div class="form-box-content" style="display: none" id="company_location_registration_form_subdistrict">
         <div class="form-group">
             <label class="control-label col-md-3" for="company_location_registration"></label>
             <div class="col-md-4">
@@ -44,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="form-box-content">
+    <div class="form-box-content" style="display: none" id="company_location_registration_form_village">
         <div class="form-group">
             <label class="control-label col-md-3" for="company_location_registration"></label>
             <div class="col-md-4">
@@ -63,7 +65,7 @@
             </div>
         </div>
     </div>
-    <div class="form-box-content">
+    <div class="form-box-content" id="company_operational_street_form_province">
         <div class="form-group">
             <label class="control-label col-md-3" for="company_operational_street"> </label>
             <label class="control-label col-md-2" for="company_operational_street"><span class="help-block">Provinsi</span></label>
@@ -73,7 +75,7 @@
             </div>
         </div>
     </div>
-    <div class="form-box-content">
+    <div class="form-box-content" style="display: none" id="company_operational_street_form_district">
         <div class="form-group">
             <label class="control-label col-md-3" for="company_operational_street"> </label>
             <label class="control-label col-md-2" for="company_operational_street"><span class="help-block">Kota</span></label>
@@ -83,7 +85,7 @@
             </div>
         </div>
     </div>
-    <div class="form-box-content">
+    <div class="form-box-content" style="display: none" id="company_operational_street_form_subdistrict">
         <div class="form-group">
             <label class="control-label col-md-3" for="company_operational_street"> </label>
             <label class="control-label col-md-2" for="company_operational_street"><span class="help-block">Kecamatan</span></label>
@@ -93,7 +95,7 @@
             </div>
         </div>
     </div>
-    <div class="form-box-content">
+    <div class="form-box-content" style="display: none" id="company_operational_street_form_village">
         <div class="form-group">
             <label class="control-label col-md-3" for="company_operational_street"> </label>
             <label class="control-label col-md-2" for="company_operational_street"><span class="help-block">Kelurahan</span></label>
@@ -348,14 +350,20 @@
                 if (_sub == "province")
                 {
                     $(_field + '_district').html(inner);
-                    $(_field + '_subdistrict').html();
-                    $(_field + '_village').html();
+                    if(inner == "") $(_field + '_form_district').hide(300); else $(_field + '_form_district').show(300);
+                    $(_field + '_subdistrict').html("");
+                    $(_field + '_form_subdistrict').hide(300);
+                    $(_field + '_village').html("");
+                    $(_field + '_form_village').hide(300);
                 } else if (_sub == "district")
                 {
                     $(_field + '_subdistrict').html(inner);
-                    $(_field + '_village').html();
+                    if(inner == "") $(_field + '_form_subdistrict').hide(300); else $(_field + '_form_subdistrict').show(300);
+                    $(_field + '_village').html("");
+                    $(_field + '_form_village').hide(300);
                 } else if (_sub == "subdistrict")
                 {
+                    if(inner == "") $(_field + '_form_village').hide(300); else $(_field + '_form_village').show(300);
                     $(_field + '_village').html(inner);
                 }
             },
