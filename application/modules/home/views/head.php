@@ -7,7 +7,7 @@
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>MediaCenter - Responsive eCommerce Template</title>
+	    <title>Gatot Kaca</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="<?php echo base_url(); ?>asset/assets2/css/bootstrap.min.css">
@@ -28,8 +28,22 @@
 		<link href="<?php echo base_url(); ?>asset/assets2/css/orange.css" rel="alternate stylesheet" title="Orange color">
 		<link href="<?php echo base_url(); ?>asset/assets2/css/navy.css" rel="alternate stylesheet" title="Navy color">
 		<link href="<?php echo base_url(); ?>asset/assets2/css/dark-green.css" rel="alternate stylesheet" title="Darkgreen color">
-		<!-- Demo Purpose Only. Should be removed in production : END -->
-
+		<script src="<?php echo base_url(); ?>asset/assets2/js/jquery-1.10.2.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/jquery-migrate-1.2.1.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/bootstrap.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/gmap3.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/bootstrap-hover-dropdown.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/owl.carousel.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/css_browser_selector.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/echo.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/jquery.easing-1.3.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/bootstrap-slider.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/jquery.raty.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/jquery.prettyPhoto.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/jquery.customSelect.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/wow.min.js"></script>
+                <script src="<?php echo base_url(); ?>asset/assets2/js/scripts.js"></script>
+        
 	    <!-- Fonts -->
 		
 		
