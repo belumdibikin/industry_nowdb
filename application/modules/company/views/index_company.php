@@ -275,20 +275,13 @@
 <script type="text/javascript">
     var id_company = "<?php echo $id; ?>";
     
-    if(id_company != "")
+    if(id_company !== "")
     {
         var location_registration = "<?php echo $company_location_registration; ?>";
         location_registration = location_registration.split("#");
         console.log(location_registration);
     }
     
-    function addOn() {
-        $('#btn_plus').load("<?php echo site_url('company/btn_minus'); ?>");
-        console.log("Masuk");
-        // $('#input_baru').append("<input type='text' id='input_url' name='company_website' class='form-control input-sm' value='http://''>");
-        // $('#input_baru').append("<button class='btn btn-primary' id='btn_plus' onClick='addOn()'><i class='fa fa-plus-square'></i></button>");  
-    }
-
     $.ajax({
         type: "POST",
         url: "<?php echo site_url('dashboard/getProvince'); ?>",
